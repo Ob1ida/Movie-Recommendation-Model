@@ -49,10 +49,10 @@ if st.button('Öner'):
         for index, row in recommendations.iterrows():
             st.write(f"Film: {row['title']}")
             movie_id = row['movie_id']
-            st.write(f"Movie ID: {movie_id}")  # Debugging step
+            st.write(f"Movie ID: {movie_id}")  
             poster_url = fetch_poster_url(movie_id)
             if poster_url:
-                st.image(poster_url, width=200)  # Adjust poster size here
+                st.image(poster_url, width=200)  
             else:
                 st.write("Poster bulunamadı.")
     else:
